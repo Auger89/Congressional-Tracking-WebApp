@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prova sort table</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	
+	<table data-toggle="table"
+       data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
+       data-sort-name="stargazers_count"
+       data-sort-order="desc">
+    <thead>
+    <tr>
+        <th data-field="name" 
+            data-sortable="true">
+                Name
+        </th>
+        <th data-field="stargazers_count" 
+            data-sortable="true">
+                Stars
+        </th>
+        <th data-field="forks_count" 
+            data-sortable="true">
+                Forks
+        </th>
+        <th data-field="description" 
+            data-sortable="true">
+                Description
+        </th>
+    </tr>
+    </thead>
+</table>
+	
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TGIF | Congress 113 Senate</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.css"/>
+		<link rel="stylesheet" href="styles/main.css">
+	</head>
+
+	<body>
+		<div class="container-fluid header">
+			<h1>TRANSPARENT GOVERNMENT IN FACT</h1>
+		</div>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" href="#"><img class="img-responsive" src="images/Logo%20TGIF%202.png"></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="home-page.html">Home</a></li>
+						<li class="dropdown active">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="senate-page.html">Senate</a></li>
+								<li><a href="house-page.html">House</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="senate-attendance-page.html">Senate</a></li>
+								<li><a href="house-attendance-page.html">House</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="senate-party-loyalty-page.html">Senate</a></li>
+								<li><a href="house-party-loyalty-page.html">House</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Info@tgif.net</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="content">
+			
+			<div class="container text">
+				<h2>SENATORS</h2>
+				<p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<fieldset>
+						<legend>State Filter</legend>
+							<select name="state-selector" id="state-selector">
+								<option value="all" id="all">ALL STATES</option>
+							</select>
+						</fieldset>
+					</div>
+				</div>
+				
+				<div class="row">					
+					<div class="col-sm-6">
+						<fieldset>
+							<legend>Party Filter</legend>
+							<input type="checkbox" id="d" value="d">
+							<label for="d">Democrat</label>
+							<input type="checkbox" id="r" value="r">
+							<label for="r">Republican</label>
+							<input type="checkbox" id="i" value="i">
+							<label for="i">Independent</label>
+						</fieldset>
+					</div>
+					
+					<div class="col-sm-6">
+						<fieldset>
+							<legend>Data Source</legend>
+							<input type="checkbox" id="nyt" value="nyt">
+							<label for="nyt">NYT</label>
+							<input type="checkbox" id="sl" value="sl">
+							<label for="sl">Sunlight Lab</label>
+						</fieldset>
+					</div>
+				</div>
+				
+				<div class="content2">
+					<table id="main-table" class="table table-striped">
+						<thead id="table-head">
+							<tr>
+								<td>Name</td>
+								<td>Party</td>
+								<td>State</td>
+								<td>Seniority</td>
+								<td>Votes</td>
+								<td>Birth Date</td>
+							</tr>
+						</thead>
+						<tbody id="table-body">
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+		</div>
+		
+		<template id="data-template">
+			<tr>
+				<td><a href="{{ url }}">{{ name }}</a></td>
+				<td>{{ party }}</td>
+				<td>{{ state }}</td>
+				<td>{{ seniority }}</td>
+				<td>{{ votes }}</td>
+				<td>{{ birthday }}</td>
+			</tr>
+		</template>
+		
+		<footer class="container-fluid">
+			<p>&copy; 2016 TGIF | All Rights Reserved</p>
+		</footer>
+		
+		<script type="text/javascript" src="javascript/global-functions.js"></script>
+		<script type="text/javascript" src="javascript/main.js"></script>
+		<script type="text/javascript" src="javascript/init.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.js"></script>
+	</body>
+</html>

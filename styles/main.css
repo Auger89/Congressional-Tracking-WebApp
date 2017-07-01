@@ -1,0 +1,225 @@
+h3 {
+	font-size: 25px;
+	text-align: center;
+}
+
+body {
+	background: url(../images/us_senate_80pct.jpg) no-repeat center center;
+}
+
+/* ----- HEADER -----*/
+.header {
+	background: url(../images/US%20Capitol%20Header.jpg) no-repeat center center;
+	background-size: cover;
+  max-height: 80px;
+	height: 15vw;
+	text-align: center;
+}
+
+.header h1 {
+	color: #F5F5F5;
+	font-size: 4vw;
+	font-weight: bold;
+	text-shadow: 3px 3px black;
+	opacity: 0.9;
+	margin-top: 1vw;
+	letter-spacing: 3px;
+	word-spacing: 3px;
+}
+
+/* ----- NAV -----*/
+.navbar {
+	border-radius: 0;
+	padding: 10px 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.navbar-inverse {
+	border-color: #7B0A0A;
+	background-color: #BD1E1E;
+}
+.navbar-inverse .navbar-toggle {
+	background-color: #DD1C1A;
+	border-color: #7B0A0A;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #DE7777;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #FEAAAA;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #511;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+	background-color: #511;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	background-color: #FE4444;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+	color: #222;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+	background-color: #511;
+}
+
+.navbar img{
+	width: 56px;
+	position: relative;
+	bottom: 18px;
+}
+
+/* ----- CONTENT -----*/
+
+.container {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: white;
+	box-shadow: 0 2px 2px grey;
+}
+
+.text {
+	margin: 20px auto;
+	text-align: justify;
+}
+
+.text h2 {
+	text-align: center;
+}
+
+.content {
+	margin-bottom: 30px;
+}
+
+.content2, .content3, .content4 {
+	border: 1.5px solid #AAA;
+}
+
+.content2 {
+	margin: 30px 0 30px 0;
+/*	height: 600px;*/
+/*	overflow-y: scroll;*/
+	padding: 15px;
+}
+
+.content3 {
+	padding: 0 15px;
+	margin: 20px 0;
+}
+
+.content4 {
+	padding: 0 15px;
+	margin: 20px 0;
+	height: 500px;
+	overflow-y: scroll;
+}
+
+.section {
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.section img {
+	width: 100%;
+}
+
+.separate {
+	border-bottom: 2px solid #AAA;
+	padding-bottom: 10px;
+}
+
+/* ----- FILTERS -----*/
+legend {
+	width: inherit;
+	border: none;
+	margin: 0;
+	padding: 0 5px;
+}
+
+fieldset {
+	border: 1.5px solid #555;
+	padding: 10px;
+	margin: 5px 0;
+}
+
+/* ----- TABLE -----*/
+thead {
+	font-weight: bold;
+	background-color: #23456E;
+	color: white;
+}
+
+table a {
+	color: brown;
+}
+
+/* ----- FOOTER -----*/
+footer {
+	background-color: #BD1E1E;
+	height: 60px;
+}
+
+footer p {
+	text-align: center;
+	color: white;
+	margin-top: 10px;
+}
+
+/* ----- LOADER ----- */
+
+.loader-frame {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -60px;
+	background-color: rgba(200, 200, 200, 0.9)
+}
+
+
+.loader {
+	border: 10px solid white;
+	border-top: 10px solid black;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	animation: spin 1s linear infinite;
+  /* POSITION */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.disabled {
+	opacity: 0.5;
+}
+
+/*
+colors:
+cornell red #BD1E1E
+vivid red #FD151B
+maximum red #DD1C1A
+oxford blue #03254E
+maastricht blue #011C27
+*/
